@@ -1,5 +1,6 @@
 import React from 'react';
 import CosmicLogo from './logos/CosmicLogo';
+import Logo from './logos/Logo';
 
 export default function Footer(): JSX.Element {
   return (
@@ -10,9 +11,9 @@ export default function Footer(): JSX.Element {
         className="no-underline"
       >
         <div className="flex items-center space-x-2">
-          <CosmicLogo />
+          <Logo className="h-8 w-8" />
           <span className="text-zinc-700 dark:text-zinc-300">
-            Proudly powered by Cosmic
+            Proud contributor of NoMadGang
           </span>
         </div>
       </a>
