@@ -1,30 +1,21 @@
-import Link from 'next/link';
-import OBMLogo from './OBMLogo';
-import { GlobalData } from '../../lib/types';
-import Logo from './Logo';
-import { Button, DarkThemeToggle } from 'flowbite-react';
+import { Button } from "flowbite-react";
+import type { FC } from "react";
 
-export default function SiteLogo({
-  siteData,
-}: {
-  siteData: GlobalData;
-}): JSX.Element {
+const DefaultHero: FC = function () {
   return (
-    <section>
-      {/* <div className="mx-auto flex w-full max-w-3xl flex-col items-center justify-between px-4 py-4 md:flex-row lg:px-0"> */}
-      <div className="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-12 lg:py-14">
-        <div className="flex flex-row items-center justify-center pb-8">
-          <DarkThemeToggle />
-        </div>
+    <section className="bg-white dark:bg-gray-900">
+      <div className="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-12 lg:py-16">
         <a
-          href="./blog"
+          href="#"
           className="mb-7 inline-flex items-center justify-between rounded-full bg-gray-100 px-1 py-1 pr-4 text-sm text-gray-700 hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700"
         >
-          <span className="mr-3 rounded-full bg-primary-600 px-4 py-1.5 text-xs text-white dark:bg-primary-500">
-            Contact
+          <span className="mr-3 rounded-full bg-primary-600 px-4 py-1.5 text-xs text-white">
+            New
           </span>
           &nbsp;
-          <span className="text-sm font-medium">Get in Touch</span>
+          <span className="text-sm font-medium">
+            Flowbite is out! See what's new
+          </span>
           <svg
             className="ml-2 h-5 w-5"
             fill="currentColor"
@@ -38,22 +29,16 @@ export default function SiteLogo({
             />
           </svg>
         </a>
-        {/* <h1 className="flex space-x-2"> */}
         <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
-          {siteData.metadata.site_title}
+          We invest in the world’s potential
         </h1>
         <p className="mb-8 text-lg font-normal text-gray-500 dark:text-gray-400 sm:px-16 lg:text-xl xl:px-48">
-          {siteData.metadata.site_tag}
+          Here at Flowbite we focus on markets where technology, innovation, and
+          capital can unlock long-term value and drive economic growth.
         </p>
-
         <div className="mb-8 flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-x-4 sm:space-y-0 lg:mb-16">
-          <Button
-            color="light"
-            href="https://github.com/sagarmusabbir?tab=projects"
-            size="lg"
-            className="[&>span]:items-center"
-          >
-            Projects
+          <Button color="info" href="#" size="lg" className="[&>span]:items-center">
+            Learn more
             <svg
               className="-mr-1 ml-2 h-5 w-5"
               fill="currentColor"
@@ -67,56 +52,16 @@ export default function SiteLogo({
               />
             </svg>
           </Button>
-          <Button
-            color="light"
-            href="./blog"
-            size="lg"
-            className="[&>span]:items-center"
-          >
-            Blog
+          <Button color="gray" outline size="lg" className="[&>span]:items-center">
             <svg
-              className="-mr-1 ml-2 h-5 w-5"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fillRule="evenodd"
-                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                clipRule="evenodd"
-              />
-            </svg>
-          </Button>
-          <Button
-            color="gray"
-            outline
-            size="lg"
-            href="https://www.upwork.com/workwith/smamusabbirs"
-            className="[&>span]:items-center"
-          >
-            {/* <svg
               className="-ml-1 mr-2 h-5 w-5"
               fill="currentColor"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z" />
-            </svg> */}
-            Work with me
-            <menu>
-              <svg
-                className="-mr-1 ml-2 h-5 w-5"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </menu>
+            </svg>
+            Watch video
           </Button>
         </div>
         <div className="mx-auto px-4 text-center md:max-w-screen-md lg:max-w-screen-lg lg:px-36">
@@ -229,4 +174,6 @@ export default function SiteLogo({
       </div>
     </section>
   );
-}
+};
+
+export default DefaultHero;

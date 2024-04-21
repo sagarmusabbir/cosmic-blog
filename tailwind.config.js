@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-
+import colors from 'tailwindcss/colors';
 const defaultTheme = require('tailwindcss/defaultTheme');
 const flowbite = require('flowbite-react/tailwind');
 
@@ -12,6 +12,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: colors.emerald,
+      },
       fontFamily: {
         sans: ['var(--font-sans)', ...defaultTheme.fontFamily.sans],
       },

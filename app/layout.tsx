@@ -6,6 +6,9 @@ import Banner from '../components/Banner';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { ThemeModeScript } from 'flowbite-react';
+import { Navigation } from '../components/Navigation';
+import HeaderWithSearchBar from '../components/search';
+import DefaultHeaderNavigation from '../components/default';
 
 const sans = Generator({
   src: '../fonts/Generator-Variable.ttf',
@@ -33,7 +36,10 @@ export default async function RootLayout({
         <ThemeModeScript />
       </head>
       <body className="bg-white dark:bg-zinc-950">
-        <Banner />
+        {/* <Banner /> */}
+        {/* <Navigation /> */}
+
+        {/* <DefaultHeaderNavigation /> */}
         <Header name={siteData} />
         {children}
         <Footer />
